@@ -1,7 +1,5 @@
 """
-Aranza Balleza A01023871
 Paint, for drawing shapes.
-
 Exercises
 
 1. Add a color.
@@ -9,9 +7,10 @@ Exercises
 3. Complete rectangle.
 4. Complete triangle.
 5. Add width parameter.
-
+Javier Corona A01023063
+Aranza Balleza A01023871
+Fernanda Beltrán A01029161
 """
-
 from turtle import *
 from freegames import vector
 
@@ -104,6 +103,7 @@ onkey(lambda: color('cyan'), 'C')
 onkey(lambda: color('orange'), 'O')
 onkey(lambda: color('magenta'), 'M')
 onkey(lambda: color('pink'), 'P') #SE AGREGO UN NUEVO COLOR
+onkey(lambda: color ('gold'), 'G')       #Se agregó un nuevo color
 onkey(lambda: store('shape', line), 'l')
 onkey(lambda: store('shape', square), 's')
 onkey(lambda: store('shape', circle), 'c')
