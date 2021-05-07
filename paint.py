@@ -19,6 +19,9 @@ import turtle
     
 #Initializing the turtle
 
+#change background color from grid
+turtle.bgcolor("blue")
+
 def line(start, end):
     "Draw line from start to end."
     up()
