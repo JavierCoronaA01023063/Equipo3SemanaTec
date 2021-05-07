@@ -1,8 +1,3 @@
-# Evidencia Herramientas computacionales: el arte de la programacion (Gpo 200) 
-# Javier Corona A01023063 
-# Juego paint y snake! Actualizaciones en el repo.
-
-
 """Paint, for drawing shapes.
 Exercises
 1. Add a color.
@@ -11,7 +6,11 @@ Exercises
 4. Complete triangle.
 5. Add width parameter.
 """
-
+"""
+Javier Corona A01023063
+Aranza Balleza A01023871
+Fernanda Beltrán A01029161
+"""
 from turtle import *
 from freegames import vector
 
@@ -42,7 +41,7 @@ def circle(start, end):
     down()
     begin_fill()
 
-    for count in range(30):
+    for count in range(8):
         forward(end.x - start.x)
         left(45)
 
@@ -58,7 +57,7 @@ def rectangle(start, end):
     down()
     begin_fill()
 
-    for count in range(25):
+    for count in range(4):
         forward(end.x - start.x)
         left(90)
 
@@ -66,8 +65,17 @@ def rectangle(start, end):
 
 
 def triangle(start, end):
-    "Draw triangle from start to end."
-    pass  # TODO
+    "Draw triangle from start to end."  #Se agregó como hacer un triángulo
+    up()
+    goto(start.x, start.y)
+    down()
+    begin_fill()
+
+    for count in range(3):  # Un for para dibujar las 3 líneas del triangulo
+        forward(end.x - start.x)
+        left(90)
+
+    end_fill()
 
 def tap(x, y):
     "Store starting point or draw shape."
@@ -95,10 +103,11 @@ onkey(lambda: color('white'), 'W')
 onkey(lambda: color('green'), 'G')
 onkey(lambda: color('blue'), 'B')
 onkey(lambda: color('red'), 'R')
-onkey(lambda: color('red'), 'Y')
+onkey(lambda: color('yellow'), 'Y')
 onkey(lambda: color('cyan'), 'C')
 onkey(lambda: color('orange'), 'O')
 onkey(lambda: color('magenta'), 'M')
+onkey(lambda: color ('gold'), 'G')       #Se agregó un nuevo color
 onkey(lambda: store('shape', line), 'l')
 onkey(lambda: store('shape', square), 's')
 onkey(lambda: store('shape', circle), 'c')
