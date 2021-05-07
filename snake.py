@@ -1,7 +1,3 @@
-# Evidencia Herramientas computacionales: el arte de la programacion (Gpo 200) 
-# Javier Corona A01023063 
-# Juego paint y snake! Actualizaciones en el repo.
-
 """Snake, classic arcade game.
 Exercises
 1. How do you make the snake faster or slower?
@@ -33,7 +29,7 @@ def move():
     head.move(aim)
 
     if not inside(head) or head in snake:
-        square(head.x, head.y, 9, 'black')
+        square(head.x, head.y, 9, 'red')
         update()
         return
 
@@ -49,9 +45,9 @@ def move():
     clear()
 
     for body in snake:
-        square(body.x, body.y, 9, 'blue')
+        square(body.x, body.y, 9, 'green')   #Se le cambió el color a la serpiente de negro a verde
 
-    square(food.x, food.y, 9, 'red')
+    square(food.x, food.y, 9, 'yellow')    # Se cambió el color de la comida a amarillo también
     update()
     ontimer(move, 100)
 
