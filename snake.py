@@ -22,7 +22,8 @@ aim = vector(0, -10)
 
 #Agregarle un titulo al prograrma
 turtle.title("My Snake Program")
-
+#Cambia el color y contorno de la flecha 
+t.color("blue", "red")
 
 def change(x, y):
     "Change snake direction."
