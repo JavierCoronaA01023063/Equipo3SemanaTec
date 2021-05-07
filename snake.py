@@ -1,8 +1,6 @@
-# Evidencia Herramientas computacionales: el arte de la programacion (Gpo 200) 
-# Javier Corona A01023063 
-# Juego paint y snake! Actualizaciones en el repo.
-
-"""Snake, classic arcade game.
+"""
+Aranza Balleza A01023871
+Snake, classic arcade game.
 Exercises
 1. How do you make the snake faster or slower?
 2. How can you make the snake go around the edges?
@@ -14,9 +12,15 @@ from turtle import *
 from random import randrange
 from freegames import square, vector
 
+import turtle
+
 food = vector(0, 0)
 snake = [vector(10, 0)]
 aim = vector(0, -10)
+
+#Agregarle un titulo al prograrma
+turtle.title("My Snake Program")
+
 
 def change(x, y):
     "Change snake direction."
@@ -33,7 +37,7 @@ def move():
     head.move(aim)
 
     if not inside(head) or head in snake:
-        square(head.x, head.y, 9, 'black')
+        square(head.x, head.y, 9, 'red')
         update()
         return
 
@@ -49,9 +53,9 @@ def move():
     clear()
 
     for body in snake:
-        square(body.x, body.y, 9, 'blue')
+        square(body.x, body.y, 9, 'black')
 
-    square(food.x, food.y, 9, 'red')
+    square(food.x, food.y, 9, 'green')
     update()
     ontimer(move, 100)
 
