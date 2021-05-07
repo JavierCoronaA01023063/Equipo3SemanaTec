@@ -1,19 +1,23 @@
-# Evidencia Herramientas computacionales: el arte de la programacion (Gpo 200) 
-# Javier Corona A01023063 
-# Juego paint y snake! Actualizaciones en el repo.
+"""
+Aranza Balleza A01023871
+Paint, for drawing shapes.
 
-
-"""Paint, for drawing shapes.
 Exercises
+
 1. Add a color.
 2. Complete circle.
 3. Complete rectangle.
 4. Complete triangle.
 5. Add width parameter.
+
 """
 
 from turtle import *
 from freegames import vector
+
+import turtle
+    
+#Initializing the turtle
 
 def line(start, end):
     "Draw line from start to end."
@@ -42,7 +46,7 @@ def circle(start, end):
     down()
     begin_fill()
 
-    for count in range(30):
+    for count in range(8):
         forward(end.x - start.x)
         left(45)
 
@@ -58,7 +62,7 @@ def rectangle(start, end):
     down()
     begin_fill()
 
-    for count in range(25):
+    for count in range(4):
         forward(end.x - start.x)
         left(90)
 
@@ -95,7 +99,7 @@ onkey(lambda: color('white'), 'W')
 onkey(lambda: color('green'), 'G')
 onkey(lambda: color('blue'), 'B')
 onkey(lambda: color('red'), 'R')
-onkey(lambda: color('red'), 'Y')
+onkey(lambda: color('yellow'), 'Y')
 onkey(lambda: color('cyan'), 'C')
 onkey(lambda: color('orange'), 'O')
 onkey(lambda: color('magenta'), 'M')
